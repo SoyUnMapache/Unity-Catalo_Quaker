@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: dfe0f00c472722b459c6aaa889e03b87
+timeCreated: 1498255581
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: KG All of Me
+  fontNames:
+  - KG All of Me
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
