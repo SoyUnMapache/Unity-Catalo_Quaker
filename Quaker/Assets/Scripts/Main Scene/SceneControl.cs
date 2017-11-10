@@ -56,6 +56,11 @@ public class SceneControl : MonoBehaviour
     public VideoClip[] videoScreenSaver;
 
     /// <summary>
+    /// Muestra el titulo del tipo de receta
+    /// </summary>
+    public Text Title;
+
+    /// <summary>
     /// Posición minima del swipe, esto para que cuando cambien de escena y regresen a productos el swipe resetie su posición
     /// </summary>
     Vector2 offsetMaxRecetas;
@@ -74,6 +79,11 @@ public class SceneControl : MonoBehaviour
     /// Almacena el año y el mes en el que estamos
     /// </summary>
     int month, year;
+
+    public GameObject Desayunos;
+    public GameObject Postres;
+    public GameObject Panaderia;
+    public GameObject Bebidas;
 
     private void Start()
     {
@@ -176,6 +186,75 @@ public class SceneControl : MonoBehaviour
         _canvasRecetas.gameObject.SetActive(false);
         _canvasBeneficios.gameObject.SetActive(false);
         _canvasRazones.gameObject.SetActive(false);
+        regresarScreenSaver = 90.0f;
+    }
+
+    public void btnDesyunos()
+    {
+        Title.text = "DESAYUNOS";
+
+        _canvasRecetas.transform.GetChild(0).gameObject.SetActive(true);
+        for (int i = 0; i < _canvasRecetas.transform.GetChild(1).childCount; i++)
+            _canvasRecetas.transform.GetChild(1).GetChild(i).gameObject.SetActive(false);
+
+        _canvasMain.gameObject.SetActive(false);
+        _canvasScreenSaver.gameObject.SetActive(false);
+        _canvasRecetas.gameObject.SetActive(true);
+        Desayunos.SetActive(true);
+        _canvasRazones.gameObject.SetActive(false);
+        _canvasBeneficios.gameObject.SetActive(false);
+        regresarScreenSaver = 90.0f;
+    }
+
+    public void btnBebidas()
+    {
+        Title.text = "BEBIDAS";
+
+
+        _canvasRecetas.transform.GetChild(0).gameObject.SetActive(true);
+        for (int i = 0; i < _canvasRecetas.transform.GetChild(1).childCount; i++)
+            _canvasRecetas.transform.GetChild(1).GetChild(i).gameObject.SetActive(false);
+
+        _canvasMain.gameObject.SetActive(false);
+        _canvasScreenSaver.gameObject.SetActive(false);
+        _canvasRecetas.gameObject.SetActive(true);
+        Bebidas.SetActive(true);
+        _canvasRazones.gameObject.SetActive(false);
+        _canvasBeneficios.gameObject.SetActive(false);
+        regresarScreenSaver = 90.0f;
+    }
+
+    public void btnPanaderia()
+    {
+        Title.text = "PANADERIA";
+
+        _canvasRecetas.transform.GetChild(0).gameObject.SetActive(true);
+        for (int i = 0; i < _canvasRecetas.transform.GetChild(1).childCount; i++)
+            _canvasRecetas.transform.GetChild(1).GetChild(i).gameObject.SetActive(false);
+
+        _canvasMain.gameObject.SetActive(false);
+        _canvasScreenSaver.gameObject.SetActive(false);
+        _canvasRecetas.gameObject.SetActive(true);
+        Panaderia.SetActive(true);
+        _canvasRazones.gameObject.SetActive(false);
+        _canvasBeneficios.gameObject.SetActive(false);
+        regresarScreenSaver = 90.0f;
+    }
+
+    public void btnPostres()
+    {
+        Title.text = "POSTRES";
+
+        _canvasRecetas.transform.GetChild(0).gameObject.SetActive(true);
+        for (int i = 0; i < _canvasRecetas.transform.GetChild(1).childCount; i++)
+            _canvasRecetas.transform.GetChild(1).GetChild(i).gameObject.SetActive(false);
+
+        _canvasMain.gameObject.SetActive(false);
+        _canvasScreenSaver.gameObject.SetActive(false);
+        _canvasRecetas.gameObject.SetActive(true);
+        Postres.SetActive(true);
+        _canvasRazones.gameObject.SetActive(false);
+        _canvasBeneficios.gameObject.SetActive(false);
         regresarScreenSaver = 90.0f;
     }
 
